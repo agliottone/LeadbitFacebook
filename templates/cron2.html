@@ -1,0 +1,17 @@
+Leads Trovati: {{ leads|length }}
+<hr>
+Inviati: {{ salvati|length }}<br>
+{%for obj in salvati %}
+{{obj.raw}}  - {{obj.response}}<br>
+{%endfor%}
+<hr>
+Falliti: {{ falliti|length }}<br>
+{%for obj in falliti %}
+{{obj.raw}}  - {{obj.response}}<br>
+{%endfor%}
+<hr>
+Errori:<br><br>
+{%for err in errori %}
+{{err}}<br>
+{%endfor%}
+

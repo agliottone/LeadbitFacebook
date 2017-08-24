@@ -1,0 +1,22 @@
+Campagne: 
+{%for campagna in campagne %}
+{{campagna.name}} - {{campagna.rss}} - {{campagna.api}}
+{%endfor%}
+<hr>
+Trovati: {{ feed|length }}
+<hr>
+Salvati: {{ salvati|length }}<br>
+{%for obj in salvati %}
+{{obj.name}}<br>
+{%endfor%}
+<hr>
+Falliti: {{ falliti|length }}<br>
+{%for obj in falliti %}
+{{obj.name}}<br>
+{%endfor%}
+<hr>
+Errori:<br><br>
+{%for err in errori %}
+{{err}}<br>
+{%endfor%}
+
